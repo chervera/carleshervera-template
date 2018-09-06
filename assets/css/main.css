@@ -38,13 +38,17 @@ nav a {
 }
 
 section {
-    height: 100vh;
     min-height: 600px;
+    min-height: 100vh;
 }
 
 section.dark {
     background: #272727;
     color: #fff;
+}
+
+section .h1 {
+    margin-bottom: 45px;
 }
 
 .featured{
@@ -86,6 +90,7 @@ section.dark {
 
 #start .h1 {
     display: inline-block;
+    margin: 0;
 }
 
 #start .h2 {
@@ -107,12 +112,8 @@ section.dark {
     justify-content: center;
     padding: 75px 35px;
 }
-
-#about-me .h1 {
-    margin-bottom: 45px;
-}
-
 #about-me p {
+
     margin-bottom: 50px;
 }
 
@@ -122,6 +123,22 @@ section.dark {
     position: relative;
     z-index: 1;
 }
+
+#employement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 75px 35px;
+}
+
+#articles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 75px 35px;
+}
+
+.article{ margin-bottom: 50px;}
 
 #contact-me {}
 
