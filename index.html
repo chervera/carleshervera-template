@@ -7,7 +7,8 @@
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Roboto+Condensed:300,400,700|Roboto:300,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Roboto+Condensed:300,400,700|Roboto:300,400,400i"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
 
@@ -16,19 +17,14 @@
 </head>
 
 <body>
-    <nav>
-        <div>
-            <a href="#about-me" title="About Me">About Me</a>
-        </div>
-        <div>
-            <a href="#articles" title="Articles">Articles</a>
-        </div>
-        <div>
-            <a href="#employement" title="Employement">Employement</a>
-        </div>
-        <div>
-            <a href="#contact" title="Contact">Contact</a>
-        </div>
+    <div id="toggle-nav" class="toggler-nav" data-target="main-menu">
+        <span>Open Menu</span>
+    </div>
+    <nav id="main-menu">
+        <a href="#about-me" title="About Me">About Me</a>
+        <a href="#articles" title="Articles">Articles</a>
+        <a href="#employement" title="Employement">Employement</a>
+        <a href="#contact" title="Contact">Contact</a>
     </nav>
     <section id="start">
         <h1 class="h1">Carles Hervera</h1>
@@ -165,6 +161,55 @@
             </ul>
         </div>
     </section>
+
+    <script>
+        const firstSectionToShowMenuId = 'start';
+        const lastSectionToShowWhiteId = 'about-me';
+        const marginToShowMenu = 80;
+        const menu = document.getElementById('main-menu');
+        const toggler = document.getElementById('toggle-nav');
+
+        function togglerNav() {
+            toggler.classList.toggle('pressed');
+
+            const target = document.getElementById(toggler.getAttribute('data-target'));
+            if (target) {
+                target.classList.toggle('opened');
+            } else {
+                console.error("No target found");
+            }
+        }
+
+        function checkMenuVisibility() {
+            let top = window.pageYOffset || document.documentElement.scrollTop;
+
+            let firstSectionToShowBounding = document.getElementById(firstSectionToShowMenuId).getBoundingClientRect();
+            let lastSectionToShowWhiteBounding = document.getElementById(lastSectionToShowWhiteId).getBoundingClientRect();
+            if ((firstSectionToShowBounding.height + firstSectionToShowBounding.top - marginToShowMenu) < 0) {
+                toggler.classList.add('show');
+            } else {
+                toggler.classList.remove('show');
+                toggler.classList.remove('pressed');
+                menu.classList.remove('opened');
+            }
+
+            if ((lastSectionToShowWhiteBounding.height + lastSectionToShowWhiteBounding.top  - marginToShowMenu) < 0) {
+                toggler.classList.add('black');
+            } else {
+                toggler.classList.remove('black');
+            }
+        }
+
+
+        const menuLinks = document.querySelectorAll("nav a ");
+        for (i = 0; i < menuLinks.length; ++i) {
+            menuLinks[i].addEventListener('click', togglerNav);
+        }
+
+        toggler.addEventListener('click', togglerNav);
+
+        document.addEventListener('scroll', checkMenuVisibility);
+    </script>
 </body>
 
 </html>
