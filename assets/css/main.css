@@ -42,12 +42,12 @@ section {
     min-height: 100vh;
 }
 
-section.dark {
+.dark {
     background: #272727;
     color: #fff;
 }
 
-section.grey {
+.grey {
     background: #f3f3f3;
 }
 
@@ -59,12 +59,11 @@ section .h1 {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    padding: 8px;
+    padding: 12px;
 }
 
 .featured::after {
     content: ' ';
-    border: 8px solid #fff;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -73,11 +72,15 @@ section .h1 {
     z-index: -2;
 }
 
+.dark .featured::after {
+    border: 12px solid #fff;
+}
+
 .featured::before {
     content: ' ';
     position: absolute;
-    top: -8px;
-    bottom: 8px;
+    top: -12px;
+    bottom: 12px;
     left: -35px;
     right: 35px;
     z-index: -1;
@@ -151,8 +154,8 @@ section .h1 {
 }
 
 .article img {
-    width: 100%;
-    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -194,7 +197,7 @@ section .h1 {
     line-height: 1.2em;
 }
 
-.more{
+.more {
     color: #272727;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
@@ -205,31 +208,69 @@ section .h1 {
     position: relative;
 }
 
-.more::after{
+.more::after {
     content: ' ';
     position: absolute;
     left: 35px;
     width: 12px;
-    top:12px;
+    top: 12px;
     bottom: 12px;
     background: #272727;
 }
-.more::before{
+
+.more::before {
     content: ' ';
     position: absolute;
     left: 12px;
     width: 58px;
-    top:35px;
+    top: 35px;
     height: 12px;
     background: #272727;
 }
 
-
-
-#contact-me {}
+#contact-me .header {
+    padding: 35px;
+}
 
 #contact-me img {
-    width: 100%;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+#contact-me .content {
+    min-height: 600px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-me .content .h1{
+    font-size: 35px;
+}
+
+#contact-me ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+#contact-me ul li a{
+    text-indent: -99999px;
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: 5px;
+}
+
+.social-networks.icons a.linked-in{
+    background: url('../img/linkedin.png') center center no-repeat;
+}
+
+.social-networks.icons a.twitter{
+    background: url('../img/twitter.png') center center no-repeat;
 }
 
 /* media queries */
