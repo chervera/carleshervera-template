@@ -186,6 +186,7 @@
         const toggler = document.getElementById('toggle-nav');
 
         function togglerNav() {
+            console.log("togglerNav");
             toggler.classList.toggle('pressed');
 
             const target = document.getElementById(toggler.getAttribute('data-target'));
@@ -216,11 +217,6 @@
             }
         }
 
-
-        const menuLinks = document.querySelectorAll("nav a ");
-        for (i = 0; i < menuLinks.length; ++i) {
-            menuLinks[i].addEventListener('click', togglerNav);
-        }
 
         toggler.addEventListener('click', togglerNav);
         menu.addEventListener('click', togglerNav);
