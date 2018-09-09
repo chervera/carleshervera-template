@@ -261,7 +261,7 @@ section .h1 {
     top: 4px;
     word-wrap: break-word;
     font-family: 'Oswald', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.4em;
 }
 
@@ -306,6 +306,7 @@ section .h1 {
 
 .article .featured {
     padding: 15px 40px;
+    min-height: 140px;
 }
 
 .article .featured:after {
@@ -367,6 +368,7 @@ section .h1 {
 .article .content p {
     font-size: 16px;
     line-height: 1.2em;
+    display: none;
 }
 
 .more {
@@ -408,16 +410,20 @@ section .h1 {
     transform: rotate(0deg);
 }
 
+.more:hover{
+    text-decoration: underline;
+}
+
 .more:hover::after {
     -webkit-transition: all .3s;
     transition: all .3s;
-    transform: rotate(-45deg);
+    transform: rotate(90deg);
 }
 
 .more:hover::before {
     -webkit-transition: all .3s;
     transition: all .3s;
-    transform: rotate(-45deg);
+    transform: rotate(90deg);
 }
 
 #contact-me .header {
@@ -547,4 +553,6 @@ section .h1 {
     .timeline .event:nth-child(2) .description {
         padding: 0 0 0 344px;
     }
+
+    
 }
