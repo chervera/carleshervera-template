@@ -216,6 +216,13 @@ section .h1 {
     background: #272727;
 }
 
+.featured.type2::before{
+    top: -12px;
+    bottom: 12px;
+    left: 65px;
+    right: 12px;
+}
+
 /* sections */
 #start {
     display: flex;
@@ -323,7 +330,7 @@ section .h1 {
     text-align: center;
 }
 
-.article {
+.article-list .article {
     background: #fff;
     display: inline-block;
     max-width: 350px;
@@ -332,26 +339,26 @@ section .h1 {
     color: #272727;
 }
 
-.article img {
+.article-list .article img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-.article .featured {
+.article-list .article .featured {
     padding: 15px 40px;
     min-height: 140px;
 }
 
-.article .featured:after {
+.article-list .article .featured:after {
     border: 12px solid #272727;
 }
 
-.article .featured::before {
+.article-list .article .featured::before {
     background: #fff;
 }
 
-.article .featured.type1::before {
+.article-list .article .featured.type1::before {
     top: 12px;
     left: 35px;
     right: 0;
@@ -360,14 +367,14 @@ section .h1 {
     transition: all .3s;
 }
 
-.article:hover .featured.type1::before {
+.article-list .article:hover .featured.type1::before {
     top: 55px;
     left: 155px;
     right: 0;
     bottom: 0;
 }
 
-.article .featured.type2::before {
+.article-list .article .featured.type2::before {
     top: 85px;
     left: 12px;
     right: 0;
@@ -376,14 +383,14 @@ section .h1 {
     transition: all .3s;
 }
 
-.article:hover .featured.type2::before {
+.article-list .article:hover .featured.type2::before {
     top: 12px;
     left: 135px;
     right: 0;
     bottom: 0;
 }
 
-.article .featured.type3::before {
+.article-list .article .featured.type3::before {
     top: 12px;
     left: 0;
     right: 85px;
@@ -392,14 +399,14 @@ section .h1 {
     transition: all .3s;
 }
 
-.article:hover .featured.type3::before {
+.article-list .article:hover .featured.type3::before {
     top: 155px;
     left: 0;
     right: 12px;
     bottom: 0;
 }
 
-.article .content p {
+.article-list .article .content p {
     font-size: 16px;
     line-height: 1.2em;
     display: none;
@@ -508,6 +515,44 @@ section .h1 {
 
 .social-networks.icons a.twitter {
     background: url('../img/twitter.png') center center no-repeat;
+}
+
+#article #header{
+    padding: 35px;
+    background: #272727;
+    color: #fff;
+}
+
+#article .h1{
+    line-height: 1em;
+    font-size: 35px;
+    margin: 0;
+}
+
+#article #content{
+    padding: 35px;
+    font-size: 16px;
+}
+
+#article #footer{
+    padding: 35px 35px 1px 35px;
+}
+
+#article #footer .category, #article #footer .tags-list{
+    margin-bottom: 35px;
+    padding: 35px;
+}
+
+#article #footer a{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#article #footer span{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
 }
 
 /* media queries */
