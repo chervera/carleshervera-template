@@ -58,36 +58,46 @@ nav a {
     display: inline-block;
 }
 
-nav a.main {
-    font-weight: 500;
+header {
+    padding: 15px;
 }
 
-nav a.main .logo {
-    font-weight: 500;
-    background: #fff;
+header a.main {
+    font-size: 22px;
+    text-decoration: none;
+    color: #272727;
+    font-family: 'Oswald', sans-serif;
+    display: inline-block;
+    font-weight: 400;
+}
+
+header a.main .logo {
+    font-weight: 400;
+    background: #272727;
     display: inline-block;
     height: 35px;
     width: 35px;
     text-align: center;
-    color: #272727;
-    margin-right: 3px;
+    color: #fff;
+    margin-right: 5px;
     border-radius: 100%;
     font-size: 22px;
-    padding-left: 1px;
-    margin-top: 1px;
+    padding-left: 0px;
+    margin-top: 0px;
 }
 
 .toggler-nav {
-    width: 45px;
-    height: 43px;
+    width: 30px;
+    height: 24px;
     position: fixed;
-    right: 35px;
-    top: 35px;
+    right: 15px;
+    top: 26px;
     z-index: 9;
     display: none;
 }
 
-.toggler-nav.show, .toggler-nav.inside {
+.toggler-nav.show,
+.toggler-nav.inside {
     display: block;
 }
 
@@ -98,8 +108,8 @@ nav a.main .logo {
     text-indent: -9999px;
     display: inline-block;
     background: #fff;
-    width: 45px;
-    height: 8px;
+    width: 24px;
+    height: 1px;
     left: 0;
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -132,14 +142,14 @@ nav a.main .logo {
 
 .toggler-nav span {
     position: absolute;
-    top: 17px;
+    top: 8px;
     opacity: 1;
     filter: alpha(opacity=1);
 }
 
 .toggler-nav::before {
     position: absolute;
-    top: 35px;
+    top: 16px;
     transform: rotate(0deg);
 }
 
@@ -152,7 +162,7 @@ nav a.main .logo {
 
 .toggler-nav.pressed::after {
     transform: rotate(45deg);
-    top: 18px;
+    top: 12px;
 }
 
 .toggler-nav.pressed span {
@@ -162,7 +172,7 @@ nav a.main .logo {
 
 .toggler-nav.pressed::before {
     transform: rotate(-45deg);
-    top: 18px;
+    top: 12px;
 }
 
 section.screen-size {
@@ -216,7 +226,7 @@ section .h1 {
     background: #272727;
 }
 
-.featured.type2::before{
+.featured.type2::before {
     top: -12px;
     bottom: 12px;
     left: 65px;
@@ -517,40 +527,53 @@ section .h1 {
     background: url('../img/twitter.png') center center no-repeat;
 }
 
-#article #header{
+#article #header {
     padding: 35px;
-    background: #272727;
-    color: #fff;
 }
 
-#article .h1{
+#article .h1 {
     line-height: 1em;
     font-size: 35px;
     margin: 0;
 }
 
-#article #content{
+#article #subheader {
+    background: #272727;
+    color: #fff;
+    display: inline-block;
+    padding: 15px;
+}
+
+#article #content {
     padding: 35px;
     font-size: 16px;
 }
 
-#article #footer{
+#article #content>p,
+#article #content>div,
+#article #content>h2,
+#article #content>ul {
+    margin-bottom: 30px;
+}
+
+#article #footer {
     padding: 35px 35px 1px 35px;
 }
 
-#article #footer .category, #article #footer .tags-list{
+#article #footer .category,
+#article #footer .tags-list {
     margin-bottom: 35px;
     padding: 35px;
 }
 
-#article #footer a{
+#article #footer a {
     color: #fff;
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     text-decoration: none;
 }
 
-#article #footer span{
+#article #footer span {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
 }

@@ -16,15 +16,7 @@
 </head>
 
 <body>
-    <div id="toggle-nav" class="toggler-nav" data-target="main-menu">
-        <span>Open Menu</span>
-    </div>
-    <nav id="main-menu">
-        <a href="#about-me" title="About Me">About Me</a>
-        <a href="#articles" title="Articles">Articles</a>
-        <a href="#employement" title="Employement">Employement</a>
-        <a href="#contact" title="Contact">Contact</a>
-    </nav>
+    <?php include 'includes/menu.php' ?>
     <section id="start" class="screen-size">
         <h1 class="h1">Carles Hervera</h1>
         <h2 class="h2">Web developer // reopleved beW</h2>

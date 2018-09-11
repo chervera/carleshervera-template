@@ -17,19 +17,16 @@
 </head>
 
 <body>
-    <div id="toggle-nav" class="toggler-nav inside" data-target="main-menu">
-        <span>Open Menu</span>
-    </div>
-    <nav id="main-menu" class="inside">
-        <a href="/" title="Carles Hervera" class="main"><span class="logo">C</span><span class="name">Hervera</span></a>
-        <a href="/#about-me" title="About Me">About Me</a>
-        <a href="#articles" title="Articles">Articles</a>
-        <a href="#employement" title="Employement">Employement</a>
-        <a href="#contact" title="Contact">Contact</a>
-    </nav>
+    <?php 
+    $inside = true;
+    include 'includes/menu.php' 
+    ?>
     <article id="article">
         <section id="header">
             <h1 class="h1">Porque la usabilidad no se mide en número de clicks y otros mitos.</h1>
+        </section>
+        <section id="subheader">
+            <span>Vestibulum ante ipsum primis in faucibus orci luctus et ultries pueser cubila curae.</span>
         </section>
         <section id="content">
             <p>
