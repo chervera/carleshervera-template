@@ -7,8 +7,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Roboto+Condensed:300,400,700|Roboto:300,400,400i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Roboto+Condensed:400,400i|Roboto:700" rel="stylesheet">
 
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
 
@@ -26,7 +25,7 @@
         <a href="#employement" title="Employement">Employement</a>
         <a href="#contact" title="Contact">Contact</a>
     </nav>
-    <section id="start">
+    <section id="start" class="screen-size">
         <h1 class="h1">Carles Hervera</h1>
         <h2 class="h2">Web developer // reopleved beW</h2>
         <div class="social-networks">
@@ -40,7 +39,7 @@
             </ul>
         </div>
     </section>
-    <section id="about-me" class="dark">
+    <section id="about-me" class="dark screen-size">
         <h1 class="h1">About Me</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et neque risus. Integer sed faucibus turpis.
             Aliquam et nisi nec justo ullamcorper ultricies id eget lorem. Suspendisse eleifend mauris eu est
@@ -52,7 +51,7 @@
             a transmetre
         </div>
     </section>
-    <section id="employement">
+    <section id="employement" class="screen-size">
         <h1 class="h1">Employement</h1>
         <div class="timeline">
             <div class="event">
@@ -109,7 +108,7 @@
 
             </ul>
     </section>
-    <section id="articles" class="grey">
+    <section id="articles" class="grey screen-size">
         <h1 class="h1">Articles</h1>
         <div class="article-list">
             <a class="article" href="#">
@@ -117,7 +116,7 @@
                     <img src="assets/img/articles/article1.jpg" alt="text image 1" />
                 </div>
                 <div class="content featured type1">
-                    <h2 class="h2">Porque la usabilidad no se mide en numero de clicks y otros mitos</h2>
+                    <h2 class="h2">Porque la usabilidad no se mide en numero de clicks</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et neque risus. Integer sed
                         faucibus turpis. Aliquam et nisi nec justo ullamcorper ultricies id eget lorem. Suspendisse
@@ -145,7 +144,7 @@
                     <img src="assets/img/articles/article1.jpg" alt="text image 1" />
                 </div>
                 <div class="content featured type3">
-                    <h2 class="h2">Porque la usabilidad </h2>
+                    <h2 class="h2">Porque la usabilidad no se mide en numero de clicks</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et neque risus. Integer sed
                         faucibus turpis. Aliquam et nisi nec justo ullamcorper ultricies id eget lorem. Suspendisse
@@ -159,7 +158,7 @@
             Ver todos
         </a>
     </section>
-    <section id="contact-me">
+    <section id="contact-me" class="screen-size">
         <div class="header dark">
             <div class="featured">
                 <img src="assets/img/all-of-mi.jpg" alt="All of me" />
@@ -200,8 +199,14 @@
         function checkMenuVisibility() {
             let top = window.pageYOffset || document.documentElement.scrollTop;
 
-            let firstSectionToShowBounding = document.getElementById(firstSectionToShowMenuId).getBoundingClientRect();
-            let lastSectionToShowWhiteBounding = document.getElementById(lastSectionToShowWhiteId).getBoundingClientRect();
+            const firstSectionToShowMenuElement = document.getElementById(firstSectionToShowMenuId);
+            const lastSectionToShowWhiteElement = document.getElementById(lastSectionToShowWhiteId);
+            if (!firstSectionToShowMenuElement || !lastSectionToShowWhiteElement) {
+                console.error("No first or last section to show menu");
+                return;
+            }
+            const firstSectionToShowBounding = firstSectionToShowMenuElement.getBoundingClientRect();
+            const lastSectionToShowWhiteBounding = lastSectionToShowWhiteElement.getBoundingClientRect();
             if ((firstSectionToShowBounding.height + firstSectionToShowBounding.top - marginToShowMenu) < 0) {
                 toggler.classList.add('show');
             } else {

@@ -18,7 +18,9 @@ body {
     padding-top: 8px;
 }
 
-nav {
+nav {}
+
+nav#main-menu {
     position: fixed;
     padding-top: 65px;
     padding-right: 65px;
@@ -30,11 +32,20 @@ nav {
     right: 0;
     bottom: 0px;
     left: 0;
-    background: #272727e6;
+    background: #fff;
+    -webkit-transition: all 3s;
+    transition: all 3s;
 }
 
-nav.opened {
+nav#main-menu .main {
+    display: none;
+}
+
+nav#main-menu.opened {
     display: flex;
+    -webkit-transition: all 3s;
+    transition: all 3s;
+    background: #272727e6;
 }
 
 nav a {
@@ -42,9 +53,28 @@ nav a {
     text-decoration: none;
     color: #fff;
     font-family: 'Oswald', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     padding: 10px;
     display: inline-block;
+}
+
+nav a.main {
+    font-weight: 500;
+}
+
+nav a.main .logo {
+    font-weight: 500;
+    background: #fff;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    color: #272727;
+    margin-right: 3px;
+    border-radius: 100%;
+    font-size: 22px;
+    padding-left: 1px;
+    margin-top: 1px;
 }
 
 .toggler-nav {
@@ -57,7 +87,7 @@ nav a {
     display: none;
 }
 
-.toggler-nav.show {
+.toggler-nav.show, .toggler-nav.inside {
     display: block;
 }
 
@@ -78,13 +108,19 @@ nav a {
 
 .toggler-nav.black::after,
 .toggler-nav.black span,
-.toggler-nav.black::before {
+.toggler-nav.black::before,
+.toggler-nav.inside::after,
+.toggler-nav.inside span,
+.toggler-nav.inside::before {
     background: #272727;
 }
 
 .toggler-nav.black.pressed::after,
 .toggler-nav.black.pressed span,
-.toggler-nav.black.pressed::before {
+.toggler-nav.black.pressed::before,
+.toggler-nav.inside.pressed::after,
+.toggler-nav.inside.pressed span,
+.toggler-nav.inside.pressed::before {
     background: #fff;
 }
 
@@ -129,7 +165,7 @@ nav a {
     top: 18px;
 }
 
-section {
+section.screen-size {
     box-sizing: border-box;
     min-height: 600px;
     min-height: 100vh;
@@ -285,8 +321,6 @@ section .h1 {
 
 .article-list {
     text-align: center;
-    
-    
 }
 
 .article {
@@ -410,7 +444,7 @@ section .h1 {
     transform: rotate(0deg);
 }
 
-.more:hover{
+.more:hover {
     text-decoration: underline;
 }
 
@@ -478,6 +512,17 @@ section .h1 {
 
 /* media queries */
 @media (min-width:992px) {
+    nav#main-menu.inside .main {
+        display: inline;
+    }
+
+    nav#main-menu.inside {
+        bottom: auto;
+        display: block;
+        background: #272727;
+        padding: 15px 0;
+    }
+
     #start {
         background: url('../img/carles-hervera.jpg') 70% bottom no-repeat;
         background-size: contain;
@@ -553,6 +598,4 @@ section .h1 {
     .timeline .event:nth-child(2) .description {
         padding: 0 0 0 344px;
     }
-
-    
 }
