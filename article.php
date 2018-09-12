@@ -7,7 +7,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Roboto+Condensed:300,400,700|Roboto:300,400,400i"
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Roboto+Condensed:300,400,700|Roboto:300,400,400i,500"
         rel="stylesheet">
 
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
@@ -28,9 +28,7 @@
         <section id="subheader">
             <span>Vestibulum ante ipsum primis in faucibus orci luctus et ultries pueser cubila curae.</span>
         </section>
-        <section id="header-img">
-            <img src="assets/img/articles/usabilidad.jpg" alt="Usabiliad / UX" />
-        </section>
+        <section id="header-img" style="background-image: url(assets/img/articles/usabilidad.jpg);"></section>
         <section id="content">
             <p>
                 Al hablar de <strong>usabilidad / UX</strong> se suelen escuchar ciertas pautas que nos ayudan a saber
@@ -55,7 +53,7 @@
             <p>
                 Si solo aplicamos <strong>pautas de usabilidad</strong> más, nos podemos encontrar con <u>ciertas
                     contradicciones</u> que
-                haran que consigamos lo contrario a lo que queriamos en un principio. Por ejemplo:
+                haran que consigamos lo contrario a lo que queriamos en un principio. Algunos ejemplos:
             </p>
 
             <div class="extended-list">
@@ -65,7 +63,7 @@
                     </span>
                     <p>
                         Es posible que aunque aumentemos el numero de clicks lo compensemos con creces si la aplicación
-                        está bien organizada y las pantallas tengan un y solo un propósito.
+                        está bien organizada y las pantallas tienen un y solo un propósito.
                     </p>
                 </div>
                 <div class="item">
@@ -82,7 +80,7 @@
                         Es tan sencillo todo que un usuario experto pierde tiempo en aclaraciones superfluas
                     </span>
                     <p>
-                        No solo hay que tener en cuenta al usuario que entra por primera vez, tambié al que utiliza la
+                        No solo hay que tener en cuenta al usuario que entra por primera vez, también al que utiliza la
                         aplicación a diario, los gestos y atajos de teclado son algunas de las acciones que nos ayudan
                         en este sentido</u>.
                     </p>
@@ -103,9 +101,8 @@
             </p>
 
             <p>
-                Por lo tanto, solo aplicaré según que norma si ella me acerca mas a rebajar a mínimos ese lapso de
+                Por lo tanto, solo aplicaré según que norma de usabilidad si ella me acerca mas a rebajar a mínimos ese lapso de
                 tiempo.
-
             </p>
 
             <p>
