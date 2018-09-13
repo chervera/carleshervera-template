@@ -646,6 +646,8 @@ section .h1 {
     font-size: 16px;
 }
 
+#article #comments{background: #272727; height: 150px;}
+
 
 
 /* media queries */
@@ -739,7 +741,8 @@ section .h1 {
 
     #article #header .h1,
     #article #subheader span,
-    #article #content,
+    #article #central,
+    #article #comments,
     #article #footer .tags-list
     {
         display: block;
@@ -749,11 +752,16 @@ section .h1 {
     }
     #article #header .h1,
     #article #subheader span,
-    #article #content
     {
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    #article #central{display: flex;}
+    #article #content{width: 768px;}
+    #article #footer{width: 224px;}
+
+    
 }
 
 @media (min-width:1200px) {
