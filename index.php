@@ -7,7 +7,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Roboto+Condensed:400,400i|Roboto:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Roboto+Condensed:400,400i|Roboto:400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
 
@@ -108,12 +108,9 @@
                     <img src="assets/img/articles/article1.jpg" alt="text image 1" />
                 </div>
                 <div class="content featured type1">
-                    <h2 class="h2">Porque la usabilidad no se mide en numero de clicks</h2>
+                    <h2 class="h2">Porque la usabilidad no se mide en numero de clicks y otros mitos</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et neque risus. Integer sed
-                        faucibus turpis. Aliquam et nisi nec justo ullamcorper ultricies id eget lorem. Suspendisse
-                        eleifend mauris eu est tristique, a accumsan mauris cursus. Praesent orci eros, pharetra
-                        convallis dui a, tincidunt tristique leo. Sed ut gravida purus.
+                    Cuando hay que tomar decisiones en torno a la usabilidad o UX de nuestra aplicación es bueno saber como medir este parametro.
                     </p>
                 </div>
             </a>
