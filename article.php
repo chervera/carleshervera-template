@@ -94,7 +94,7 @@
                     siguiente definición de usabilidad:
                 </p>
 
-                <h2 class="h2">La usabilidad se mide por el tiempo que tarda el usuario desde que se le ocurre lo que
+                <h2 class="h2 quoted">La usabilidad se mide por el tiempo que tarda el usuario desde que se le ocurre lo que
                     quiere hacer, hasta que termina de hacerlo.
                 </h2>
 

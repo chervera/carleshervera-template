@@ -19,28 +19,20 @@
     <?php include 'includes/menu.php' ?>
     <section id="start" class="screen-size">
         <h1 class="h1">Carles Hervera</h1>
-        <h2 class="h2">Web developer // reopleved beW</h2>
-        <div class="social-networks">
-            <ul>
-                <li>
-                    <a href="#" class="linked-in" title="Linked In">LinkedIn</a>
-                </li>
-                <li>
-                    <a href="#" class="twitter" title="Twitter">Twitter</a>
-                </li>
-            </ul>
-        </div>
+        <h2 class="h2">Frontend developer // Software Engineer</h2>
     </section>
     <section id="about-me" class="dark screen-size">
         <h1 class="h1">About Me</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et neque risus. Integer sed faucibus turpis.
-            Aliquam et nisi nec justo ullamcorper ultricies id eget lorem. Suspendisse eleifend mauris eu est
-            tristique, a accumsan mauris cursus. Praesent orci eros, pharetra convallis dui a, tincidunt tristique leo.
+        <p>
+            Soy un apasionado de los proyectos web y del mundo de internet en general. Me gusta la tecnología y trabajar con ella. <br/>
+            Cuento con más de diez años de experiencia desarrollando software.<br/>
+            En la actualidad trabajo en desarrollando proyectos Frontend con las últimas tecnologías (Angular, AngularJS y otros).<br/> 
+            Me encargo de gestionar los proyectos, darles forma y encontrar la mejor solución para ayudar a nuestros clientes a conseguir sus objetivos.
         </p>
-        <div class="featured">
-            Aquesta serà <br />
-            una idea clau <br />
-            a transmetre
+        <div class="featured social-networks">
+            <a href="#">Linkedin</a><br/>
+            <a href="#">Twitter</a><br/>
+            <a href="#">Instagram</a>
         </div>
     </section>
     <section id="employement" class="screen-size">
@@ -65,8 +57,8 @@
                         <span class="title">AXON</span>
                     </div>
                 </div>
-                <span class="description">Monté mi propia empresa, AXON, donde
-                    aprendí el trato con el cliente, la venta y la
+                <span class="description">Inicié mi propia empresa, AXON, donde
+                    aprendí del trato con el cliente, la venta y la
                     gestión de proyectos desde el principio
                     hasta el fin, realizando toma de requisitos,
                     consultoría, diseño, ejecución y manteni-
@@ -103,42 +95,14 @@
     <section id="articles" class="grey screen-size">
         <h1 class="h1">Articles</h1>
         <div class="article-list">
-            <a class="article" href="#">
+            <a class="article" href="article.php">
                 <div class="header">
-                    <img src="assets/img/articles/article1.jpg" alt="text image 1" />
+                    <img src="assets/img/articles/usabilidad.jpg" alt="Usabilidad UX" />
                 </div>
                 <div class="content featured type1">
                     <h2 class="h2">Porque la usabilidad no se mide en numero de clicks y otros mitos</h2>
                     <p>
                     Cuando hay que tomar decisiones en torno a la usabilidad o UX de nuestra aplicación es bueno saber como medir este parametro.
-                    </p>
-                </div>
-            </a>
-            <a class="article" href="#">
-                <div class="header">
-                    <img src="assets/img/articles/article1.jpg" alt="text image 2" />
-                </div>
-                <div class="content featured type2">
-                    <h2 class="h2">Porque la usabilidad no se mide en numero de clicks</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et neque risus. Integer sed
-                        faucibus turpis. Aliquam et nisi nec justo ullamcorper ultricies id eget lorem. Suspendisse
-                        eleifend mauris eu est tristique, a accumsan mauris cursus. Praesent orci eros, pharetra
-                        convallis dui a, tincidunt tristique leo. Sed ut gravida purus.
-                    </p>
-                </div>
-            </a>
-            <a class="article" href="#">
-                <div class="header">
-                    <img src="assets/img/articles/article1.jpg" alt="text image 1" />
-                </div>
-                <div class="content featured type3">
-                    <h2 class="h2">Porque la usabilidad no se mide en numero de clicks</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et neque risus. Integer sed
-                        faucibus turpis. Aliquam et nisi nec justo ullamcorper ultricies id eget lorem. Suspendisse
-                        eleifend mauris eu est tristique, a accumsan mauris cursus. Praesent orci eros, pharetra
-                        convallis dui a, tincidunt tristique leo. Sed ut gravida purus.
                     </p>
                 </div>
             </a>
