@@ -35,6 +35,16 @@ body {
     font-weight: 700;
 }
 
+.code.css {
+    color: #ff00a1;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.code.code--big{
+    font-size: 26px;
+}
+
 .copy-clipboard {
     position: relative;
 }
@@ -407,6 +417,7 @@ section .h1 {
     text-decoration: none;
     color: #272727;
     text-align: left;
+    vertical-align: top;
 }
 
 .article-list .article img {
@@ -630,6 +641,10 @@ section .h1 {
     background: url('../img/twitter.png') center center no-repeat;
 }
 
+.social-networks.icons a.github {
+    background: url('../img/github.png') center center no-repeat;
+}
+
 #article #header {
     padding: 15px;
 }
@@ -765,6 +780,11 @@ section .h1 {
     padding: 50px 15px;
 }
 
+.table{ background: #00b56e;}
+.table__responsive{overflow: scroll;}
+.table__row{}
+.table__col{ background: #fff; padding: 15px; font-size: 14px; line-height: 18px;}
+.table__col.table__col--head{background: #b1ffa0;}
 
 @media (min-width:321px) {
     .h1 {

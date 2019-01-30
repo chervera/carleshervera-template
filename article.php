@@ -66,6 +66,7 @@
                             Es posible que aunque aumentemos el numero de clicks lo compensemos con creces si la aplicación
                             está bien organizada y las pantallas tienen un y solo un propósito.
                         </p>
+                        <div class="separator"></div>
                     </div>
                     <div class="item">
                         <span>
@@ -75,6 +76,7 @@
                             Hay que diferenciar una aclaración necesaria de una aclaración irrelevante. <u>Cuando todo es
                                 relevante, todo se convierte en irrelevante</u>.
                         </p>
+                        <div class="separator"></div>
                     </div>
                     <div class="item">
                         <span>
@@ -85,6 +87,7 @@
                             aplicación a diario, los gestos y atajos de teclado son algunas de las acciones que nos ayudan
                             en este sentido</u>.
                         </p>
+                        <div class="separator"></div>
                     </div>
                 </div>
 

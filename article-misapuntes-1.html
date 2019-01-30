@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
 
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/js/highlight/styles/monokai-sublime.css" />
+    <link rel="stylesheet" href="./node_modules/highlight.js/styles/monokai-sublime.css" />
 
 </head>
 
@@ -23,71 +23,66 @@
             <h1 class="h1">Mis apuntes - Javascript30 de Wes Bos - Dia 1 Drums</h1>
         </section>
         <section id="subheader">
-            <span>Mis apuntes y cosas interesantes que he sacado del primer dia de curso Javascript30 - Drums</span>
+            <span>Mis apuntes y cosas interesantes que he sacado del primer día de curso Javascript30 - Drums</span>
         </section>
         <section id="header-img" style="background-image: url(assets/img/articles/mis-apuntes-js30-dia-1.jpg); background-position-y: center;"></section>
         <div id="central">
             <section id="content">
                 <p>
                     <a href="https://javascript30.com/" target="_blank">Javascript30</a> es un conjunto de tutoriales
-                    para hacer, en principio, uno por dia durante 30 dias.<br />
+                    para hacer, en principio, uno por día durante 30 días.<br />
                     Todos tratan de vanilla Javascript ( "a pelo" sin frameworks, sin jQuery, sin Angular...).<br />
                     Son muy entretenidos ya que Wes Bos, el creador y speaker, los hace sencillos pero muy útiles. <br />
-                    Se realizan en muy poco tiemo, sobre los 25 minutos ya que todo el HTML y CSS ya lo aporta el
+                    Se realizan en muy poco tiemo, sobre los 25 minutos, ya que todo el HTML y CSS lo aporta él
                     mediante un repositorio en
-                    <strong>GitHub</strong> al principio del curso.<br />
-
-                    <span class="hightlight">Estos cursos son totalmente recomendables.</span>
-
+                    <strong>GitHub</strong>.
+                    <br />
                     Ahí van mis apuntes del curso:
                 </p>
-                <h2 class="h2">Apuntes Sobre <span class="code html">HTML</span></h2>
-                <h3 class="h3">Atributos data-cualquiercosa</h3>
+                <h2 class="h2">Mis apuntes sobre <span class="code javascript">Javascript</span></h2>
+                <h3 class="h3">Atributos data-<i>cualquiercosa</i></h3>
                 <p>
 
-                    Este tipo de atributos se añadieron con la versión de HTML 5.<br />
-                    Los atributos data se usan para definir atributos que se usarán desde Javascript ya que el
+                    Este tipo de atributos se añadieron en la versión de HTML 5.<br />
+                    Los atributos <span class="code minnor">data</span> se emplean para definir datos que se usarán desde Javascript ya que el
                     motor de renderizado del navegador no los va a tener en cuenta.
-                    Gracias a ellos, por ejemplo podemos tener un enlace así:
+                    Gracias a ellos, por ejemplo, podemos tener un enlace así:
                     <pre><code class="html">&lt;a href="mienlace.html" data-thumb="asset/thumb/imagen-1.png">Ver buena foto&lt;/a></code></pre>
-                    Y con un poco de Javascript podríamos hacer que al pasar por encima nos mostrase la foto que le
-                    pasamos con data-thumb.
+                    Y mediante Javascript podríamos hacer que al pasar por encima con el ratón nos mostrase la foto que indicamos en <span class="code minnor">data-thumb</span>.
                     <div class="separator"></div>
                 </p>
-
-                <h2 class="h2">Apuntes Sobre <span class="code javascript">Javascript</span></h2>
                 <h3 class="h3">Añadir eventos con addEventListener</h3>
                 <p>
 
-                    La función addEventListener nos permite asociar funciones (handlers) a
-                    eventos que producen los elementos a los que se asocian. <br />
+                    La función <span class="code minnor">addEventListener</span> nos permite asociar funciones (<i>handlers</i>) a
+                    eventos que son producidos por algunos elementos. <br />
                     Por ejemplo:<br />
 
                     <pre><code class="js">closeButton.addEventListener('click', function(event){console.log(this)});</code></pre>
 
-                    Es importante tener en cuenta que el <span class="code minnor">this</span> dentro del la función
-                    del evento hace referencia al elemento que tiene el evento asociado, en este caso al <span class="code minnor">link</span>.<br />
+                    Es importante tener en cuenta que <span class="code minnor">this</span> dentro de la función
+                    que ha disparado evento, hace referencia al elemento disparador, en este caso al <span class="code minnor">link</span>.<br /><br />
 
-                    Se pueden añadir también eventos a la <span class="code minnor">window</span> por lo que por
-                    ejemplo si añadimos un handler al click, se disparará sea cual sea el sitio que cliquemos.
+                    Se pueden añadir también eventos al elemento <span class="code minnor">window</span>, por
+                    ejemplo, si añadimos un handler al click, se disparará sea cual sea el sitio que cliquemos.
 
                     <div class="separator"></div>
                 </p>
 
                 <h3 class="h3">Funciones querySelector y querySelectorAll</h3>
                 <p>
-                    Estas dos funciones son muy utiles para navegar por el DOM de nuestra aplicación.<br />
+                    Éstas sirven para seleccionar nodos del DOM de nuestra aplicación.<br /><br />
                     <span class="code minnor">querySelector(selectores)</span> busca y devuelve un elemento que
-                    concuerde con los selectores pasados. El formato de los selectores es el mismo que para <span class="code minnor">CSS</span>.<br />
-                    Hay que tener en cuenta que si hay mas de un resultado nos devolverá el primero que encuentre.
+                    concuerde con los selectores pasados por parametro. El formato de los selectores es el mismo que utilizamos <span class="code minnor">CSS</span>.<br />
+                    Hay que tener en cuenta que si hay más de un resultado nos devolverá el primero que encuentre.
                     <span class="code minnor">Null</span> si no encuentra ninguno.<br />
-                    <span class="code minnor">querySelectorAll(selectores)</span> funciona igual que el primero pero
-                    devuevle una lista de nodos del DOm (NodeList).<br />
+                    <br />
+                    <span class="code minnor">querySelectorAll(selectores)</span> funciona igual que el anterior pero
+                    devuelve una lista de nodos del DOM (NodeList).<br />
                     <br />
                     Ejemplos:
 
-                    <pre>
-                        <code class="js">
+                    <pre><code class="js">
 //El primer elemento que tenga la clase 'featured'
 const featured =  document.querySelector('.featured');
 
@@ -96,8 +91,70 @@ const child =  featured.querySelector('.child');
 
 //Un listado con todos los nodos que tengan la clase 'children'
 const children =  document.querySelector('.children');
-                        </code></pre>
+                    </code></pre>
+                    <div class="separator"></div>
+                </p>
 
+                <h3 class="h3">Utilizar elemento &lt;AUDIO> desde Javascript</h3>
+                <p>
+                    La versión 5 de HTML añadió el elemento <a href="https://www.w3schools.com/HTML/html5_audio.asp"
+                        target="_blank">audio</a> al estándar como forma de reproducir audio.<br />
+                    <pre><code class="html">
+&lt;audio controls>
+    &lt;source src="bejo-mucho.mp3" type="audio/mpeg">
+&lt;/audio>
+
+                    </code></pre>
+
+                    También, añadió a su API métodos para controlarlo desde Javascript. Con el método play(), éste
+                    empezará a sonar. Si se vuelve a ejecutar el método mientras éste está sonando, no se reiniciará.
+                    Para que esto suceda hay que <i>settear</i> el atributo <span class="code minnor">currentTime</span> a 0.<br />
+                </p>
+
+                <h2 class="h2">Mis apuntes sobre <span class="code css">CSS</span></h2>
+                <h3 class="h3">Transiciones entre cambios de propiedades</h3>
+                <p>
+                    Desde la aparición de CSS3 y las <a href="https://www.w3schools.com/css/css3_transitions.asp"
+                        target="_blank">transiciones</a> ya no es necesario recurrir a Javascript para animar nuestras
+                    Webs.<br />
+                    Nos permite especificar la propiedad sobre la que queremos que se aplique, el tiempo y la función
+                    de tiempo.<br />
+                    Por ejemplo:
+                    <div class="rectangle">Ponte encima mío</div>
+                    <style>
+                        .rectangle {
+                            padding: 15px;
+                            background: #66ffa6;
+                            width: 155px;
+                            transition: width 1s ease-in-out;
+                        }
+
+                        .rectangle:hover {
+                            width: 300px;
+                        }
+                    </style>
+                    <pre><code class="css">.rectangle{
+        padding: 15px;
+        background: #ce66ff;
+        width: 155px;
+        transition: width 1s ease-in-out;
+    }
+    
+    .rectangle:hover{
+        width: 300px;
+    }
+                    </code></pre>
+
+                    Asimismo, al finalizar las transiciones, se dispara el evento <span class="code minnor">transitionend</span>
+                    al que podemos suscribirnos.<br />
+                    <pre><code class="javascript">element.addEventListener('transitionend', function(){})</code></pre>
+                    Hay que tener en cuenta que se lanzará un evento por cada propiedad modificada ya que podemos poner
+                    transiciones en una o varias propiedades a la vez separándolas por comas o simplemente poniendo
+                    <span class="code minnor">all</span> en el selector de propiedad.
+                    <div class="separator"></div>
+                </p>
+                <p>
+                    Y estos son mis apuntes del curso de Javascript30 día 1.
                 </p>
 
                 <div class="fotoby">
@@ -128,7 +185,6 @@ const children =  document.querySelector('.children');
     </article>
 
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/highlight/highlight.pack.js"></script>
     <script>
         var decode_entities = (function () {
             // Remove HTML Entities
