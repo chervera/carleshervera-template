@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Carles Hervera Website</title>
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Roboto+Condensed:300,400,700|Roboto:300,400,400i,500"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/highlight.js/styles/monokai-sublime.css"
+    />
+  </head>
+
+  <body>
+    <article id="article">
+      <section id="header">
+        <h1 class="h1">
+          Consejos y buenas practicas sobre programación y desarrollo de
+          software.
+        </h1>
+      </section>
+      <section id="subheader">
+        <span>
+          Listado de consejos y buenas practicas aplicables a cualquier lenguaje
+          de programación y en desarrollo de hardware en general. 
+          Este es una selección de las que considero esenciales.
+        </span>
+      </section>
+      <section
+        id="header-img"
+        style="background-image: url(assets/img/articles/buenas-practicas-programacion.jpg); background-position-y: center;"
+      ></section>
+      <div id="central">
+        <section id="content">
+          <p>
+            Al terminar el último proyecto en que he participado, que por
+            cierto, ha terminado con éxito 🙂, hemos hecho una retrospectiva
+            para corregir y mejorar todas las practicas posibles a mejorar
+            cuando empiece el próximo.
+            <br />
+            Hemos visto una gran cantidad de cosas a mejorar y las vamos
+            aplicar. <br />
+            De ahí ha salido también un listado de
+            <strong>buenas prácticas esenciales</strong> que a continuación describo.<br />
+            Son transversales por lo que sirven para cualquier tecnología. Para
+            cualquier comentario, corrección o propuesta de mejora, aquí dejo el
+            enlace de github:
+            <a
+              href="https://github.com/chervera/best-practices/blob/master/TRANSVERSAL/transversal-best-practices.md"
+              target="_blank"
+              class="link link--icon link--github"
+              >Buenas prácticas</a
+            >
+            <ol>
+                <li>
+                    <strong>
+                        Single Responsibility Principle (SRP)
+                    </strong>
+                    <span>
+                        Este principio habla de que cada elemento en programación sirva únicamente para una objetivo especifico.<br/>
+                        Por lo tanto un método save(), solo va a guardar los datos. Si también se tiene que enviar un mail informando del cambio, se creará un método a parte.                            
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                        KISS - Keep it simple, stupid
+                    </strong>
+                    <span>
+                        Como dice la misma frase, hay que hacerlo sencillo. Todo. Como mas sencillo, mas mantenible, mas escalable, mas testeable. En el futuro te lo agradecerás.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                        DRY - Don't repeat yourself
+                    </strong>
+                    <span>
+                        No te repitas. De esta forma el código que hagas, será mucho más mantenible, ya que solo estará una vez. Mas escalable, ya que solo estará una vez. Mas testeable, ya que solo estará una vez. ya que solo estará una vez. ya que solo estará una vez.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                        Nomenclaturas - Escribir en modo prosa
+                    </strong>
+                    <span>
+                            Como dice "Uncle Bob" en el libro "Clean Code", nos pasamos el 80% del tiempo leyendo código y solo un 20% escribiendolo. Por eso primaremos que el código se entienda sobre que sea fácil de escribir.<br/>
+                            Es una buena practica poner en el nombre de las funciones todo lo que hacen, si vemos que nos queda demasiado largo, hay que plantearnos si nos estamos saltando la norma SRP.
+                    </span>
+                    <pre>
+                        <code class="js">
+                            person.crtDoc();                   -> incorrecto
+                            person.createDocumentation()       -> correcto
+                        </code>
+                    </pre>
+                </li>
+
+                <li>
+                    <strong>
+                        Convenciones
+                    </strong>
+                    <span>
+                        Todos los lenguages suelen tener unas convenciones que dictan la forma de escribirlo, JAVA, JavaScript - (no tiene unas directamente, pero se puede usar las de <a href="https://google.github.io/styleguide/jsguide.html#naming" target="_blank">google</a>) C#. Es conveniente seguirlas, de esta forma el código de todo el equipo sera homogéneo.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                        Separación de capas
+                    </strong>
+                    <span>
+                        Las aplicaciones de software, suelen estar divididas por capas lógicas (Controladores, Servicios, Persistencia...). El no respetarlas, no siempre significa que el código no "funcione".<br/>
+                        Podemos hacer una consulta en un controlador, pero aunque parezca más rápido, hará que incumplamos muchas de las buenas practicas descritas y por tanto a la larga (o no tan larga) será una gran perdida de tiempo y un incremento de dolores de cabeza.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                        Deja el bosque (código) mas limpio de lo que lo encontraste
+                    </strong>
+                    <span>
+                            Cuando nos ponemos a resolver un problema en un código o a hacer un evolutivo, muchas veces nos encontramos con que lo que ya está hecho, no sigue los princípios de buenas prácticas.<br/>
+                            Suele ser más cómodo seguir tal i como está, pero lo que hay que hacer es hacer nuestra tarea y arreglar lo que esté mal. De esta forma, se equilibra el estropeo al que tiende el software de forma natural.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                        Escribe código que NO necesite ser documentado
+                    </strong>
+                    <span>
+                            Si seguimos todas las buenas prácticas aquí escritas, nuestro código no debería necesitar de documentación, ya que se debería entender por si solo.<br/>
+                            El principio no dice que no se documente, si no que cuando se necesite documentar una función/objeto/código nos tiene que saltar la alarma, ya que igual estamos saltandonos alguna de las buenas prácticas anteriores.
+                    </span>
+                </li>
+
+            </ol>
+          </p>
+
+          <div class="fotoby">
+            <span>Fotografía de portada de:</span>
+            <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@pperkins?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Patrick Perkins"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Patrick Perkins</span></a>
+          </div>
+        </section>
+        <section id="footer" class="dark">
+          <div class="tags-list featured type2">
+            <span>Etiquetas:</span><br />
+            <a href="#">Usabilidad</a>
+          </div>
+        </section>
+      </div>
+
+      <section id="comments">
+        TODO: comments
+      </section>
+    </article>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+      var decode_entities = (function() {
+        // Remove HTML Entities
+        var element = document.createElement("div");
+
+        function decode_HTML_entities(str) {
+          if (str && typeof str === "string") {
+            // Escape HTML before decoding for HTML Entities
+            str = escape(str)
+              .replace(/%26/g, "&")
+              .replace(/%23/g, "#")
+              .replace(/%3B/g, ";");
+
+            element.innerHTML = str;
+            if (element.innerText) {
+              str = element.innerText;
+              element.innerText = "";
+            } else {
+              // Firefox support
+              str = element.textContent;
+              element.textContent = "";
+            }
+          }
+          return unescape(str);
+        }
+        return decode_HTML_entities;
+      })();
+      const pres = document.querySelectorAll("pre");
+      pres.forEach(element => {
+        const clipBoardButton = document.createElement("a");
+
+        clipBoardButton.text = "Copy";
+        clipBoardButton.dataset.code = element.querySelector("code").innerHTML;
+        clipBoardButton.addEventListener("click", function() {
+          const textToCopy = decode_entities(this.dataset.code);
+          var textArea = document.createElement("textarea");
+          textArea.value = textToCopy;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand("Copy");
+          textArea.remove();
+          this.classList.add("copied");
+        });
+        const clipBoardContainer = document.createElement("div");
+        clipBoardContainer.classList.add("copy-clipboard");
+        clipBoardContainer.appendChild(clipBoardButton);
+        element.insertBefore(clipBoardContainer, element.firstChild);
+      });
+    </script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
