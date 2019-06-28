@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Carles Hervera Website</title>
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Roboto+Condensed:300,400,700|Roboto:300,400,400i,500"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/highlight.js/styles/monokai-sublime.css"
+    />
+  </head>
+
+  <body>
+    <article id="article">
+      <section id="header">
+        <h1 class="h1">
+          6 particularidades que nos ofrecen las Funciones en JavaScript y que lo hacen un leguaje tan versatil.
+        </h1>
+      </section>
+      <section id="subheader">
+        <span>
+          6 particularidades que hacen las funciones en Javascript muy versatiles y a su vez es de los elementos que hacen de este lenguaje de programación uno de los mas actuales.
+        </span>
+      </section>
+      <section
+        id="header-img"
+        style="background-image: url(assets/img/articles/6-particularidades-functiones-js.jpg); background-position-y: center;"
+      ></section>
+      <div id="central">
+        <section id="content">
+          <p>
+            Javascript es un lenguaje muy potente y con una aproximación 
+            funcional que nos da muchas oportunidades.<br/> 
+            Pero al mismo tiempo, al tener tantos modos de trabajar y tipos de funciones
+            puede llegar a ser un poco lioso.<br/> 
+            Por eso es interesante conocer las características que hacen que las <strong>funciones en Javascript</strong>
+            sean tan especiales y potentes.
+            <ol>
+                <li>
+                    <strong>
+                      Las funciones son objetos.
+                    </strong>
+                    <br/>
+                    <span>
+                      A diferencia de otros lenguajes de programación es que las funciones son objetos, por lo que se pueden 
+                      asignar a variables, crear en tiempo de ejecución o destruir.<br/>
+                     
+                      <blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Because <a href="https://twitter.com/hashtag/JS?src=hash&ref_src=twsrc%5Etfw">#JS</a> is a functional object-oriented language, functions can have methods <a href="https://twitter.com/hashtag/JSthegoodparts?src=hash&ref_src=twsrc%5Etfw">#JSthegoodparts</a></p>&mdash; Carles Hervera (@chervera) <a href="https://twitter.com/chervera/status/1101541023241650179?ref_src=twsrc%5Etfw">1 de marzo de 2019</a></blockquote>
+                      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                      Las funciones en Javascript pueden ser anónimas o tener nombre.
+                    </strong>
+                    <br/>
+                    <span>
+                      Debido a una propiedad de Javascript llamada "hoisting", una función con nombre, se puede usar antes de ser declarada, ya que todas las declaraciones se mueven al principio del ambito.
+                      <pre><code class="js">let total = suma(1,5);
+function suma(a, b){
+  return a + b;
+}</code></pre>
+                      Si son anónimas, podrán ser assignadas a variables y usadas como otra variable mas.
+                      <pre><code class="js">let operacion = function(a, b){
+  return a + b;
+}
+let resultado = operacion(1,5);
+operacion = function(a, b){
+  return a - b;
+}
+
+resultado = operacion(4,1);
+                        </code></pre>
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                        Los parámetros que se le pueden pasar a una función, son "infinitos"
+                    </strong>
+                    <br/>
+                    <span>
+                        Aunque una función defina dos parámetros de entrada o incluso ninguno, es posible pasar los parámetros que consideremos necesarios, más o menos y estos estarán disponibles en la función mediante el array <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/arguments"><i>arguments</i></a>. 
+                        Que esto sea una buena práctica ya es otro tema.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                        Las funciones flecha y el uso del <i>this</i>
+                    </strong>
+                    <br/>
+                    <span>
+                        En las versiones más modernas de Javascript se han añadido las <strong>funciones flecha</strong>. 
+                        Es un tipo de notación mas sencilla y orientada a un tipo de programación más funcional. 
+                        Son siempre anónimas y no pueden ser usadas como constructores.
+                        Se comportan casi igual excepto por el uso del <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions#this_Contextual"><i>this</i></a>, que no define un this propio si no que utiliza el del contexto de ejecución que la contiene.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                        Closures y visibilidad
+                    </strong>
+                    <br/>
+                    <span>
+                        Las funciones en javascript nos permiten crear closures y tratar la visibilidad de las propiedades o métodos.<br/>
+                        Podemos crear funciones dentro de funciones, de esta forma solo serán accesibles dentro de la función padre. <br/>
+                        Pasará lo mismo con las variables definidas dentro de las funciones.
+                    </span>
+                </li>
+
+                <li>
+                    <strong>
+                        Tipos de funciones
+                    </strong>
+                    <span>
+                        Hay varios tipos de funciones que hay que conocer. Los más importantes son:
+
+                        <ul>
+                          <li>
+                            <span>Funciones simples</span><br/>
+                            <pre><code class="js">function suma(a, b){
+  return a + b;
+}</code></pre>
+                          </li>
+                          <li>
+                            <span>Funciones anónimas</span>
+                            <pre><code class="js">let suma = function(a, b){
+  return a + b;
+}</code></pre>
+                          </li>
+                          <li>
+                            <span><a href="https://medium.com/javascript-scene/javascript-factory-functions-with-es6-4d224591a8b1" >Funciones factoría</a></span>
+                            <pre><code class="js">function createUser(name, age){
+  function sayHello(){
+    console.log('hello!');
+  }
+  return {name: name, age: age, sayHello: sayHello}
+}</code></pre>
+                          </li>
+                          <li>
+                            <span>
+                              <a href="https://developer.mozilla.org/es/docs/Glossary/IIFE">Funciones inmediatamente invocadas (IIFE)</a></span>
+                            <pre><code class="js">(function(){
+  console.log("hello!");
+})();</code></pre>
+                          </li>
+                        </ul>
+                    </span>
+                </li>
+
+
+            </ol>
+          </p>
+
+          <div class="fotoby">
+            <span>Fotografía de portada de:</span>
+            <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@bugsster?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Taras Shypka"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Taras Shypka</span></a>
+          </div>
+        </section>
+        <section id="footer" class="dark">
+          <div class="tags-list featured type2">
+            <span>Etiquetas:</span><br />
+            <a href="#">Usabilidad</a>
+          </div>
+        </section>
+      </div>
+
+      <section id="comments">
+        TODO: comments
+      </section>
+    </article>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+      var decode_entities = (function() {
+        // Remove HTML Entities
+        var element = document.createElement("div");
+
+        function decode_HTML_entities(str) {
+          if (str && typeof str === "string") {
+            // Escape HTML before decoding for HTML Entities
+            str = escape(str)
+              .replace(/%26/g, "&")
+              .replace(/%23/g, "#")
+              .replace(/%3B/g, ";");
+
+            element.innerHTML = str;
+            if (element.innerText) {
+              str = element.innerText;
+              element.innerText = "";
+            } else {
+              // Firefox support
+              str = element.textContent;
+              element.textContent = "";
+            }
+          }
+          return unescape(str);
+        }
+        return decode_HTML_entities;
+      })();
+      const pres = document.querySelectorAll("pre");
+      pres.forEach(element => {
+        const clipBoardButton = document.createElement("a");
+
+        clipBoardButton.text = "Copy";
+        clipBoardButton.dataset.code = element.querySelector("code").innerHTML;
+        clipBoardButton.addEventListener("click", function() {
+          const textToCopy = decode_entities(this.dataset.code);
+          var textArea = document.createElement("textarea");
+          textArea.value = textToCopy;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand("Copy");
+          textArea.remove();
+          this.classList.add("copied");
+        });
+        const clipBoardContainer = document.createElement("div");
+        clipBoardContainer.classList.add("copy-clipboard");
+        clipBoardContainer.appendChild(clipBoardButton);
+        element.insertBefore(clipBoardContainer, element.firstChild);
+      });
+    </script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
